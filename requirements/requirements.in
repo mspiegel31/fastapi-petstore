@@ -12,4 +12,3 @@ alembic
 
 # Models
 pydantic[email]
-

@@ -6,7 +6,6 @@ services:
         POSTGRES_DB: app_db
         POSTGRES_USER: app_user
         POSTGRES_PASSWORD: password
-    # Expose on port 5452 of the host machine
     ports:
       - "5432:5432"
     volumes:
@@ -18,10 +17,12 @@ services:
       args:
         # install prod and dev requirements
         REQUIREMENTS: "requirements/*.txt"
+    environment:
+      DATABASE_DB: app_db
+      DATABASE_USER: app_user
+      DATABASE_PASSWORD: password
     depends_on:
       - postgres
 
-    volumes:
-      - "./:/code/"
     ports:
       - "6789:80"

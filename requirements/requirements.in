@@ -1,0 +1,15 @@
+# API requirements
+fastapi
+httpx
+uvicorn[standard]
+ddtrace
+pyhumps
+
+#database
+sqlalchemy[asyncio]
+asyncpg
+alembic
+
+# Models
+pydantic[email]
+

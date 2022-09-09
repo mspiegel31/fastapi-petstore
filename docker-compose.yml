@@ -8,7 +8,7 @@ services:
         POSTGRES_PASSWORD: password
     # Expose on port 5452 of the host machine
     ports:
-      - "5452:5432"
+      - "5432:5432"
     volumes:
       - "./local_db_init_scripts:/docker-entrypoint-initdb.d"
   # payment-stats-service local development
